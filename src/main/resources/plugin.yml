@@ -1,0 +1,9 @@
+name: ModoGM
+version: ${project.version}
+main: fr.nayeone.modogm.ModoGM
+api-version: 1.16
+prefix: ModoGM
+authors: [ NayeOne ]
+loadbefore: [ EdenCraft ]
+description: Let moderator access to specific gamemode command.
+website: https://github.com/LudovicAns
