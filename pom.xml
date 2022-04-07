@@ -6,14 +6,14 @@
 
     <groupId>fr.nayeone</groupId>
     <artifactId>ModoGM</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>2.0.0</version>
     <packaging>jar</packaging>
 
     <name>ModoGM</name>
 
     <description>Let moderator access to specific gamemode command.</description>
     <properties>
-        <java.version>1.11</java.version>
+        <java.version>1.16</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <url>https://github.com/LudovicAns</url>
@@ -25,7 +25,8 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.2.0</version>
                 <configuration>
-                    <outputDirectory>D:/Desktop/Ser/plugins</outputDirectory>
+                   <!-- <outputDirectory>D:/Desktop/Ser/plugins</outputDirectory>-->
+                    <outputDirectory>/Users/ludovicanselin/Documents/EdenCraft/ServeurDev/1.18.2-EdenCraft/plugins</outputDirectory>
                 </configuration>
             </plugin>
             <plugin>
@@ -33,7 +34,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <release>11</release>
+                    <release>16</release>
                     <compilerArgs>
                         <arg>-parameters</arg>
                     </compilerArgs>
@@ -51,16 +52,6 @@
                         </goals>
                         <configuration>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
-                            <relocations>
-                                <relocation>
-                                    <pattern>co.aikar.commands</pattern>
-                                    <shadedPattern>fr.nayeone.modogm.acf</shadedPattern> <!-- Replace this -->
-                                </relocation>
-                                <relocation>
-                                    <pattern>co.aikar.locales</pattern>
-                                    <shadedPattern>fr.nayeone.modogm.locales</shadedPattern> <!-- Replace this -->
-                                </relocation>
-                            </relocations>
                         </configuration>
                     </execution>
                 </executions>
@@ -91,9 +82,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.destroystokyo.paper</groupId>
+            <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
-            <version>1.16.5-R0.1-SNAPSHOT</version>
+            <version>1.18.1-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

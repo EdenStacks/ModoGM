@@ -19,7 +19,13 @@ public class Command extends BaseCommand {
 	@Subcommand("survival")
 	@CommandPermission("modogm.survival")
 	public static void onSurvival(Player player) {
-		player.setGameMode(GameMode.SURVIVAL);
+		if (player.getGameMode().equals(GameMode.SPECTATOR) || player.getGameMode().equals(GameMode.CREATIVE)) {
+			player.setGameMode(GameMode.SURVIVAL);
+			player.setAllowFlight(true);
+			player.setFlying(true);
+		} else {
+			player.setGameMode(GameMode.SURVIVAL);
+		}
 		player.sendMessage(ModoGM.getPrefix() + "Vous êtes maintenant en mode " + ChatColor.RED + "survie" + ChatColor.RESET + ".");
 	}
 
